@@ -10,6 +10,12 @@ export default function GaugeGrid() {
     Math.random() * 200,
   ])
 
+  //TODO: lha más abajo
+  //TODO: más de medio donut
+  //TODO: Eliminar inicio fin + hacer los nogo más grandes
+  //TODO: 4 - R-V, 3 - V-R
+  //TODO: Caja de impacto (componente a parte) GaugeContainer
+
   useEffect(() => {
     const interval = setInterval(() => {
       setValues([
