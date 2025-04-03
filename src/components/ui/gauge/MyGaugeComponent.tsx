@@ -14,7 +14,7 @@ const segmentsColor = {
     "2": ["#000000", "#00FF00", "#FF0000"],
     "3": ["#00FF00", "#FF0000"],
     "4": ["#FF0000", "#00FF00"],
-    "5": ["#FF0000", "#00FF00", "#FF0000"],
+    "5": ["#FF0000", "#000000"],
 }
 
 
@@ -23,14 +23,14 @@ return (
         value={lha}
         minValue={0}
         maxValue={range * 2}
-        type="semicircle"
+        type="radial"
 
         labels={{
             valueLabel: {
                 style: {
+                    fill: "#000000",
                     fontWeight: "bold",
                 },
-                matchColorWithArc: true,
                 formatTextValue: (value) => {
                     return value.toFixed(0)
                 }
@@ -38,6 +38,7 @@ return (
 
             tickLabels: {
                 type: "outer",
+                hideMinMax: true,
                 ticks: [
                     { value: nogo1 },
                     { value: nogo2 }
@@ -50,6 +51,7 @@ return (
                 defaultTickValueConfig: {
                     style: {
                         fill: "#000000",
+                        fontSize: 20,
                         fontWeight: "bold",
                     },
                 },
@@ -58,7 +60,7 @@ return (
 
         arc={{
             colorArray: segmentsColor[colorScheme],
-            subArcs: [{ limit: nogo1 }, { limit: nogo2 }, {}],
+            subArcs: segmentsColor[colorScheme].length === 2 ? [ {limit: range}, {} ] : [{limit: nogo1}, {limit: nogo2}, {} ],
             padding: 0,
             width: 0.3,
             cornerRadius: 0,
