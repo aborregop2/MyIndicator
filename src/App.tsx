@@ -95,3 +95,6 @@ export default function GaugeGrid() {
     </div>
   )
 }
+
+//TODO: ImpactBox más grande
+//TODO: Quitar el shadow de lha

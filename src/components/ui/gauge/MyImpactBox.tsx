@@ -21,7 +21,7 @@ export default function MyImpactBox({ imp, unit = "" }: MyImpactBoxProps) {
   return (
     <div className={`${bgColor} w-full h-full rounded-lg flex items-center justify-center p-1`}>
       <div className="text-center w-full">
-        <span className="font-bold text-white text-[clamp(1rem,5vw,1.5rem)] leading-none">
+        <span className="font-bold text-white text-[clamp(1em,5vw,1.3em)] leading-none">
           {imp + (unit ? ` ${unit}` : "")}
         </span>
       </div>

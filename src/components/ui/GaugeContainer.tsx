@@ -15,7 +15,7 @@ interface GaugeContainerProps {
 export default function GaugeContainer({ title, lha, range, nogo1, nogo2, colorScheme, imp, unit }: GaugeContainerProps) {
 	return (
 	  <div className="w-full h-full flex">
-		<div className="w-5/6">
+		<div className="w-5/6 text-sm">
 			<h2 className="text-xl font-bold text-center text-black w-full">
 				{title}
 			</h2>

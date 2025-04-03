@@ -21,6 +21,7 @@ const segmentsColor = {
 return (
     <GaugeComponent
         value={lha}
+        marginInPercent= {{top: 0.08, right: 0.07, bottom: 0, left: 0.08}}
         minValue={0}
         maxValue={range * 2}
         type="radial"
@@ -39,10 +40,8 @@ return (
             tickLabels: {
                 type: "outer",
                 hideMinMax: true,
-                ticks: [
-                    { value: nogo1 },
-                    { value: nogo2 }
-                ],
+                ticks: 
+                    segmentsColor[colorScheme].length === 2 ? [{value: range}] : [{value: nogo1}, {value: nogo2}],
                 defaultTickLineConfig: {
                     color: "#000000",
                     width: 1,
@@ -51,7 +50,7 @@ return (
                 defaultTickValueConfig: {
                     style: {
                         fill: "#000000",
-                        fontSize: 20,
+                        fontSize: "1em",
                         fontWeight: "bold",
                     },
                 },
