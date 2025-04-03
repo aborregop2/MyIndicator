@@ -5,7 +5,7 @@ type MyImpactBoxProps = {
   unit?: string
 }
 
-export default function MyImpactBox({ imp,  unit = ""} : MyImpactBoxProps) {
+export default function MyImpactBox({ imp, unit = "" }: MyImpactBoxProps) {
   const [bgColor, setBgColor] = useState("bg-gray-200")
 
   useEffect(() => {
@@ -19,8 +19,13 @@ export default function MyImpactBox({ imp,  unit = ""} : MyImpactBoxProps) {
   }, [imp])
 
   return (
-    <div className={`${bgColor} w-full h-full rounded-md flex items-center justify-center font-bold text-white shadow-sm p-2 text-lg`}>
-        {imp + (unit ? ` ${unit}` : "")}
+    <div className={`${bgColor} w-full h-full rounded-lg flex items-center justify-center p-1`}>
+      <div className="text-center w-full">
+        <span className="font-bold text-white text-[clamp(1.25rem,5vw,2.5rem)] leading-none">
+          {imp + (unit ? ` ${unit}` : "")}
+        </span>
+      </div>
     </div>
   )
 }
+

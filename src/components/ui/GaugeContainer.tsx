@@ -28,13 +28,11 @@ export default function GaugeContainer({ title, lha, range, nogo1, nogo2, colorS
 			/>
 		</div>
   
-		<div className="w-1/6 relative">
-			<div className="absolute bottom-1 w-full pb-[100%]">
-				<div className="absolute top-0 left-0 w-full h-full">
-				<MyImpactBox imp={imp} unit={unit} />
-				</div>
-			</div>
-		</div>
+		<div className="w-1/6 flex flex-col justify-end">
+        	<div className="aspect-square w-full">
+          	<MyImpactBox imp={imp} unit={unit} />
+        	</div>
+      	</div>
 	  </div>
 	)
 }
