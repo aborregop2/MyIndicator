@@ -69,7 +69,6 @@ return (
         }}
 
         pointer={{
-            elastic: true,
             animationDelay: 0,
         }}
     />
