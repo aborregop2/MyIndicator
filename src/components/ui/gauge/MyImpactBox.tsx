@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from "react"
 
 type MyImpactBoxProps = {
@@ -19,9 +21,9 @@ export default function MyImpactBox({ imp, unit = "" }: MyImpactBoxProps) {
   }, [imp])
 
   return (
-    <div className={`${bgColor} w-full h-full rounded-lg flex items-center justify-center p-1`}>
+    <div className={`${bgColor} w-full h-full rounded-lg flex items-center justify-center p-1 sm:p-2`}>
       <div className="text-center w-full">
-        <span className="font-bold text-white text-[clamp(0.8em,5vw,0.3em)] leading-none">
+        <span className="font-bold text-white text-[clamp(0.9rem,2vw,1rem)] leading-tight block break-words hyphens-auto">
           {imp + (unit ? ` ${unit}` : "")}
         </span>
       </div>
