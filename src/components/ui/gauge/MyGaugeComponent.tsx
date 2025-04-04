@@ -48,7 +48,7 @@ return (
                 defaultTickLineConfig: {
                     color: "#000000",
                     width: 1,
-                    length: 5,
+                    length: 2,
                 },
                 defaultTickValueConfig: {
                     style: {
