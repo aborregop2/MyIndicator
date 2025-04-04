@@ -21,9 +21,9 @@ export default function MyImpactBox({ imp, unit = "" }: MyImpactBoxProps) {
   }, [imp])
 
   return (
-    <div className={`${bgColor} w-full h-full rounded-lg flex items-center justify-center p-1 sm:p-2`}>
-      <div className="text-center w-full">
-        <span className="font-bold text-white text-[clamp(0.9rem,2vw,1rem)] leading-tight block break-words hyphens-auto">
+    <div className={`${bgColor} w-full h-full rounded-lg flex items-center justify-center`}>
+      <div className="text-center w-full h-full flex items-center justify-center overflow-hidden p-1">
+        <span className="font-bold text-white text-[min(0.5rem,4vw)] sm:text-[min(0.6rem,3vw)] md:text-[min(0.7rem,2.5vw)] lg:text-[min(0.8rem,2vw)] truncate">
           {imp + (unit ? ` ${unit}` : "")}
         </span>
       </div>
