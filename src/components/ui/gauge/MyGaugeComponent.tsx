@@ -21,7 +21,9 @@ const segmentsColor = {
 return (
     <GaugeComponent
         value={lha}
-        marginInPercent= {{top: 0.08, right: 0.07, bottom: 0, left: 0.08}}
+        marginInPercent= {
+            {top: 0.08, right: 0.07, bottom: 0, left: 0.12 }// segmentsColor[colorScheme].length === 3 ? 0.12 : 0 }
+        }
         minValue={0}
         maxValue={range * 2}
         type="radial"
@@ -31,6 +33,7 @@ return (
                 style: {
                     fill: "#000000",
                     fontWeight: "bold",
+                    textShadow: "black 0px 0px 0px"
                 },
                 formatTextValue: (value) => {
                     return value.toFixed(0)

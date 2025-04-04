@@ -89,12 +89,8 @@ export default function GaugeGrid() {
         nogo1={30}
         nogo2={170}
         colorScheme="1"
-        imp={(values[6] / 10).toFixed(1).toString()}
-        unit="L"
+        imp={"Vamos bien"}
       />
     </div>
   )
 }
-
-//TODO: ImpactBox más grande
-//TODO: Quitar el shadow de lha
