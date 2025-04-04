@@ -22,7 +22,7 @@ return (
     <GaugeComponent
         value={lha}
         marginInPercent= {
-            {top: 0.08, right: 0.07, bottom: 0, left: 0.15 }// segmentsColor[colorScheme].length === 3 ? 0.12 : 0 }
+            {top: 0.08, right: 0.15, bottom: 0, left: 0.15 }// segmentsColor[colorScheme].length === 3 ? 0.12 : 0 }
         }
         minValue={0}
         maxValue={range * 2}
